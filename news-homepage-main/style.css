@@ -1,0 +1,314 @@
+body{
+    padding: 7em;
+    font-family: 'Inter', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+/* navegation */
+.menu{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+header figure{
+    margin: 0;
+}
+
+.menu ul{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+.menu ul li{
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.menu ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul a:focus{
+    color: hsl(5, 85%, 63%);
+}
+
+.menu ul li:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.btn__open{
+    display: none;
+}
+
+.btn__close{
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* portada */
+
+.new__container{
+    margin-top: 4em;
+    display: flex;
+    gap: 2em;
+    
+}
+
+.new__left{
+    width: 70%;
+}
+
+.new__img img{
+    width: 100%;
+}
+
+.new__notice{
+    display: flex;
+    
+
+}
+
+.new__notice h1{
+    width: 40%;
+    font-size: 3em;
+    font-weight: 900;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.description{
+    width:  60%;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+   
+}
+
+.description p{
+    margin-top: 1.5em;
+    font-size: 1.2em;
+}
+
+.description button{
+    padding:1em 1em ;
+    width: 50%;
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7em;
+    color:hsl(36, 100%, 99%) ;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    transition: 0.4s ease;
+    cursor: pointer;
+
+}
+
+.description button:hover{
+    background-color:hsl(240, 100%, 5%) ;
+}
+
+.aside{
+    width: 30%;
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    padding: 1em;
+
+
+}
+
+.aside .separator{
+border-top: 1px solid hsl(36, 100%, 99%);
+  max-width: 100%;
+  margin: 2em 0 2em 0;
+}
+
+.aside h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 3em;
+    margin: 0;
+}
+
+.aside a{
+    text-decoration: none;
+    color: hsl(36, 100%, 99%);
+    transition: .4s ease;
+}
+
+.aside a:hover{
+    color:hsl(35, 77%, 62%) ;
+}
+
+.aside h3{
+    font-size: 1.2em;
+}
+.aside p{
+    font-weight: 200;
+    font-size:1em;
+    line-height: 1.4em;    
+}
+
+
+/* notices */
+
+.notices{
+    display: flex;
+    margin-top: 5em;
+}
+
+.notice {
+    display: flex;
+    width: 100%;
+    padding-right: 1em;
+}
+
+.notice img{
+    width: 8em;
+}
+
+.notice__text{
+    width: 60%;
+}
+
+
+.notice__text span{
+    font-size: 2em;
+    font-weight: 700;
+    color: hsl(233, 8%, 79%);
+}
+
+.notice__text a{
+    text-decoration: none;
+    color: black;
+}
+
+.notice__text h3{
+    font-weight: 900;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.notice__text h3:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.notice__text p{
+    font-weight: 200;
+    line-height: 1.5em;
+}
+
+.notice__img{
+    width: 40%;
+    
+}
+
+
+@media screen and (max-width:425px) {
+     body{
+        padding: 1em;
+    } 
+    header{
+        position: relative;
+
+    }
+
+    .menu ul{
+        margin: 0;
+        display: none;
+        height: 100vh;
+        width: 70%;
+        padding: 0;
+        flex-direction: column;
+        position: fixed;
+        background-color: hsl(36, 100%, 99%);
+        top: 0;
+        bottom: 0;
+        right: 0;
+       
+    }
+
+    .menu.active::before{
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: #000000aa;
+    }
+
+    .menu.active ul{
+        display: block;
+        font-size: 1.4em;
+        padding: 0 1em;
+        padding-top: 6em;
+        
+    }
+
+    .menu.active ul li{
+        padding: 0.5em 0;
+    }
+
+    .menu .btn__close{
+        display: none;
+    }
+
+    .menu.active .btn__close{
+        display: block;
+        z-index: 2;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+    }
+
+    .btn__open{
+        display: block;
+    }
+  
+    .new__container{
+        flex-direction: column;
+    }
+
+    .new__left{
+        width: 100%;
+    }
+
+    .aside{
+        width: 100%;
+        padding: 0;
+    }
+
+    .aside-text{
+        padding: 1em;
+    }
+
+    .new__notice{
+        flex-direction: column;
+    }
+
+    .new__notice h1{
+        width: 100%;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .notices{
+        flex-direction: column;
+        gap: 2em;
+    }
+}
